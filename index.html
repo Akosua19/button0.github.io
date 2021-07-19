@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Button</title>
+        <style>
+            #btn{
+                background-color: #923;
+                color: #fff;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            #btn1{
+                background-color: #ccc;
+                color: #000000;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            #btn2{
+                background-color: #e5e5;
+                color: #000000;
+                padding: 5px;
+                border-radius: 5px;
+            }
+
+            #box1{
+                border: dotted 2px blue;
+                width: 150px;
+                height: 140px;
+
+            }
+            .count{
+                background-color: tomato;
+                color: #cccc;
+                padding: 2px;
+            }
+
+            h2{
+                font-size: 30px;
+
+            }
+            button{
+                padding: 4px;
+                background-color: lightblue;
+                border-radius: 5px;
+                font-size: 12px;
+            }
+
+                        
+            #Div1{
+                border: solid 1px black;
+                width: 200px;
+                height: 150px;
+            }
+
+            #btn5{
+                background-color: #daa520;
+                color: #000000;
+                padding: 5px;
+                border-radius: 5px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin-top: 5px;
+            }
+
+            #btn5:hover{
+                top: 1px;
+                cursor: grab;
+                font-family: sans-serif;
+                background-color: #ccc;
+            }
+
+            #btn5:active{
+                background-color: #00ff7f;
+            }
+        </style>
+    </head>
+    <body>
+        
+            <h1>Welcome!</h1>
+            <button id="btn">Click.</button>
+            <aside>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga sit repellat, excepturi quaerat tempore vero ipsa doloribus aperiam ad quae. Ullam aliquam molestiae aperiam tenetur, quas quae reiciendis atque a!</aside>
+        
+                <button id="btn1" onclick="color()">Click me</button>
+                <p>A page!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis reiciendis natus illo architecto dolorum rerum, suscipit possimus. Tempore vero eligendi consectetur voluptatibus maiores, culpa placeat corrupti totam nihil pariatur.</p>
+                       
+                    <button id="btn2">Subscribe</button>
+                        <div id="box1">
+                            <p>Alot should happen !</p>
+                        </div>
+                    
+                            <h2 class="add">0</h2>
+                            <button onclick="count()">Counter</button>
+                                    <br>
+                            
+                                    <div id="Div1">
+                                        <button id="btn5" onclick="colorDiv()"> Submit</button>
+                                    
+                                    </div>
+
+                    
+        <script>
+
+                function hello(){
+                document.querySelector('h1').innerHTML= 'Goodbye !'
+                }
+
+                document.getElementById('btn').onclick = hello;
+            //SCRIPTS FOR CHANGING COLOR OF A TEXT.
+
+                function color(){
+                    document.body.style.color = "orange"
+                }
+
+
+
+                function changeText(){
+                    document.getElementById('box1').innerHTML = 'Hey there!'
+                };
+
+                document.getElementById('btn2').onclick = changeText;
+
+
+                let increase = 0;
+                function count(){
+                    increase++;
+                    document.querySelector('.add').innerHTML = increase;
+
+                    if(increase === 10){
+                        alert(`Counter just reached ${increase}`)
+                    };
+                }
+                
+                function colorDiv() {
+                    document.getElementById("Div1").style.backgroundColor ="green";
+                }
+        </script>
+    </body>
+</html>
